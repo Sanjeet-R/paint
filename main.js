@@ -14,6 +14,7 @@ var last_position_of_x, last_position_of_y;
         //Addictonal Activity start
         color = document.getElementById("color").value;
         width_of_line = document.getElementById("width_of_line").value;
+        radius=document.getElementById("radius").value
         //Addictonal Activity ends
 
         mouseEvent = "mouseDown";
@@ -31,6 +32,7 @@ var last_position_of_x, last_position_of_y;
         ctx.lineWidth = width_of_line;
         ctx.moveTo(last_position_of_x, last_position_of_y);
         ctx.lineTo(current_position_of_mouse_x, current_position_of_mouse_y);
+        ctx.arc(current_position_of_mouse_x,current_position_of_mouse_y,radius,0,2*Math.PI);
         ctx.stroke();
         }
 
